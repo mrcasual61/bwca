@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>BWCA Entry Points Map</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/bwca.js"></script>
+
+<link href="css/bwca.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body onload="//draw();">
+
+	<div id="main">
+
+		<div id="info">
+			<div id="info_entry"></div>
+			<div id="info_description"></div>
+		</div>
+
+	 	<svg id="svg" width="1281" height="853"></svg>
+
+		<div id="map">
+			<img src="images/bwca_map.png" width="1281" height="853" border="0" />
+		</div>
+
+		<div id="image_map">
+			<img src="images/blank_map.png" width="1281" height="853" border="0" usemap="#map" />
+			<map name="map">
+				<area shape="poly" coords="1108,504,1119,517,1107,530,1095,517" alt="gunflint" onmouseover="showEntries('gunflint')" onmouseout="hideEntries('gunflint')" href="#" />
+				<area shape="circle" coords="1074,392,13" alt="43" onmouseover="displayEntry('43')" onmouseout="hideEntry('43')" href="#" />
+				<area shape="circle" coords="1074,362,13" alt="44" onmouseover="displayEntry('44')" onmouseout="hideEntry('44')" href="#" />
+				<area shape="circle" coords="1079,330,13" alt="45" onmouseover="displayEntry('45')" onmouseout="hideEntry('45')" href="#" />
+				<area shape="circle" coords="1059,307,13" alt="47" onmouseover="displayEntry('47')" onmouseout="hideEntry('47')" href="#" />
+				<area shape="circle" coords="1034,307,13" alt="48" onmouseover="displayEntry('48')" onmouseout="hideEntry('48')" href="#" />
+				<area shape="circle" coords="1011,293,13" alt="49" onmouseover="displayEntry('49')" onmouseout="hideEntry('49')" href="#" />
+				<area shape="circle" coords="920,289,13" alt="50" onmouseover="displayEntry('50')" onmouseout="hideEntry('50')" href="#" />
+				<area shape="circle" coords="886,288,13" alt="51" onmouseover="displayEntry('51')" onmouseout="hideEntry('51')" href="#" />
+				<area shape="circle" coords="865,272,13" alt="52" onmouseover="displayEntry('52')" onmouseout="hideEntry('52')" href="#" />
+				<area shape="circle" coords="846,227,13" alt="54" onmouseover="displayEntry('54')" onmouseout="hideEntry('54')" href="#" />
+				<area shape="circle" coords="821,230,11" alt="54A" onmouseover="displayEntry('54A')" onmouseout="hideEntry('54A')" href="#" />
+				<area shape="circle" coords="852,192,13" alt="55" onmouseover="displayEntry('55')" onmouseout="hideEntry('55')" href="#" />
+				<area shape="circle" coords="877,195,11" alt="55A" onmouseover="displayEntry('55A')" onmouseout="hideEntry('55A')" href="#" />
+				<area shape="circle" coords="911,251,13" alt="57" onmouseover="displayEntry('57')" onmouseout="hideEntry('57')" href="#" />
+				<area shape="circle" coords="1018,261,13" alt="58" onmouseover="displayEntry('58')" onmouseout="hideEntry('58')" href="#" />
+				<area shape="circle" coords="1074,282,13" alt="60" onmouseover="displayEntry('60')" onmouseout="hideEntry('60')" href="#" />
+				<area shape="circle" coords="1096,269,13" alt="61" onmouseover="displayEntry('61')" onmouseout="hideEntry('61')" href="#" />
+				<area shape="circle" coords="1120,290,13" alt="62" onmouseover="displayEntry('62')" onmouseout="hideEntry('62')" href="#" />
+				<area shape="circle" coords="1108,313,13" alt="64" onmouseover="displayEntry('64')" onmouseout="hideEntry('64')" href="#" />
+				<area shape="circle" coords="1159,307,13" alt="66" onmouseover="displayEntry('66')" onmouseout="hideEntry('66')" href="#" />
+				<area shape="circle" coords="1224,283,13" alt="68" onmouseover="displayEntry('68')" onmouseout="hideEntry('68')" href="#" />
+				<area shape="circle" coords="1262,304,13" alt="69" onmouseover="displayEntry('69')" onmouseout="hideEntry('69')" href="#" />
+				<area shape="circle" coords="1259,260,13" alt="70" onmouseover="displayEntry('70')" onmouseout="hideEntry('70')" href="#" />
+				<area shape="circle" coords="883,235,13" alt="80" onmouseover="displayEntry('80')" onmouseout="hideEntry('80')" href="#" />
+				<area shape="circle" coords="169,392,13" alt="1" onmouseover="displayEntry('1')" onmouseout="hideEntry('1')" href="#" />
+				<area shape="circle" coords="305,412,13" alt="4" onmouseover="displayEntry('4')" onmouseout="hideEntry('4')" href="#" />
+				<area shape="circle" coords="345,349,13" alt="6" onmouseover="displayEntry('6')" onmouseout="hideEntry('6')" href="#" />
+				<area shape="circle" coords="320,305,13" alt="7" onmouseover="displayEntry('7')" onmouseout="hideEntry('7')" href="#" />
+				<area shape="circle" coords="249,294,13" alt="8" onmouseover="displayEntry('8')" onmouseout="hideEntry('8')" href="#" />
+				<area shape="circle" coords="214,261,13" alt="9" onmouseover="displayEntry('9')" onmouseout="hideEntry('9')" href="#" />
+				<area shape="circle" coords="121,128,13" alt="12" onmouseover="displayEntry('12')" onmouseout="hideEntry('12')" href="#" />
+				<area shape="circle" coords="146,130,11" alt="12A" onmouseover="displayEntry('12A')" onmouseout="hideEntry('12A')" href="#" />
+				<area shape="circle" coords="235,237,13" alt="14" onmouseover="displayEntry('14')" onmouseout="hideEntry('14')" href="#" />
+				<area shape="circle" coords="283,249,13" alt="16" onmouseover="displayEntry('16')" onmouseout="hideEntry('16')" href="#" />
+				<area shape="circle" coords="314,265,13" alt="19" onmouseover="displayEntry('19')" onmouseout="hideEntry('19')" href="#" />
+				<area shape="circle" coords="343,266,13" alt="20" onmouseover="displayEntry('20')" onmouseout="hideEntry('20')" href="#" />
+				<area shape="circle" coords="415,303,13" alt="22" onmouseover="displayEntry('22')" onmouseout="hideEntry('22')" href="#" />
+				<area shape="circle" coords="406,328,13" alt="23" onmouseover="displayEntry('23')" onmouseout="hideEntry('23')" href="#" />
+				<area shape="circle" coords="485,380,13" alt="24" onmouseover="displayEntry('24')" onmouseout="hideEntry('24')" href="#" />
+				<area shape="circle" coords="550,341,13" alt="25" onmouseover="displayEntry('25')" onmouseout="hideEntry('25')" href="#" />
+				<area shape="circle" coords="512,371,13" alt="26" onmouseover="displayEntry('26')" onmouseout="hideEntry('26')" href="#" />
+				<area shape="circle" coords="561,363,13" alt="27" onmouseover="displayEntry('27')" onmouseout="hideEntry('27')" href="#" />
+				<area shape="circle" coords="590,365,13" alt="28" onmouseover="displayEntry('28')" onmouseout="hideEntry('28')" href="#" />
+				<area shape="circle" coords="539,400,13" alt="29" onmouseover="displayEntry('29')" onmouseout="hideEntry('29')" href="#" />
+				<area shape="circle" coords="590,400,13" alt="30" onmouseover="displayEntry('30')" onmouseout="hideEntry('30')" href="#" />
+				<area shape="circle" coords="463,415,13" alt="31" onmouseover="displayEntry('31')" onmouseout="hideEntry('31')" href="#" />
+				<area shape="circle" coords="488,459,13" alt="32" onmouseover="displayEntry('32')" onmouseout="hideEntry('32')" href="#" />
+				<area shape="circle" coords="512,479,13" alt="33" onmouseover="displayEntry('33')" onmouseout="hideEntry('33')" href="#" />
+				<area shape="circle" coords="646,507,13" alt="34" onmouseover="displayEntry('34')" onmouseout="hideEntry('34')" href="#" />
+				<area shape="circle" coords="676,499,13" alt="35" onmouseover="displayEntry('35')" onmouseout="hideEntry('35')" href="#" />
+				<area shape="circle" coords="776,488,13" alt="36" onmouseover="displayEntry('36')" onmouseout="hideEntry('36')" href="#" />
+				<area shape="circle" coords="759,464,13" alt="37" onmouseover="displayEntry('37')" onmouseout="hideEntry('37')" href="#" />
+				<area shape="circle" coords="855,431,13" alt="38" onmouseover="displayEntry('38')" onmouseout="hideEntry('38')" href="#" />
+				<area shape="circle" coords="887,446,13" alt="39" onmouseover="displayEntry('39')" onmouseout="hideEntry('39')" href="#" />
+				<area shape="circle" coords="950,413,13" alt="40" onmouseover="displayEntry('40')" onmouseout="hideEntry('40')" href="#" />
+				<area shape="circle" coords="983,398,13" alt="41" onmouseover="displayEntry('41')" onmouseout="hideEntry('41')" href="#" />
+				<area shape="circle" coords="1008,400,11" alt="41A" onmouseover="displayEntry('41A')" onmouseout="hideEntry('41A')" href="#" />
+				<area shape="circle" coords="622,519,13" alt="67" onmouseover="displayEntry('67')" onmouseout="hideEntry('67')" href="#" />
+				<area shape="circle" coords="584,518,13" alt="75" onmouseover="displayEntry('75')" onmouseout="hideEntry('75')" href="#" />
+				<area shape="circle" coords="551,519,13" alt="84" onmouseover="displayEntry('84')" onmouseout="hideEntry('84')" href="#" />
+				<area shape="circle" coords="371,318,13" alt="77" onmouseover="displayEntry('77')" onmouseout="hideEntry('77')" href="#" />
+				<area shape="circle" coords="286,84,13" alt="71A" onmouseover="displayEntry('71A')" onmouseout="hideEntry('71A')" href="#" />
+				<area shape="circle" coords="610,304,13" alt="71B" onmouseover="displayEntry('71B')" onmouseout="hideEntry('71B')" href="#" />
+				<area shape="circle" coords="804,194,13" alt="71C" onmouseover="displayEntry('71C')" onmouseout="hideEntry('71C')" href="#" />
+				<area shape="poly" coords="609,259,624,274,609,289,595,274" alt="prairie_portage" onmouseover="showEntries('prairie_portage')" onmouseout="hideEntries('prairie_portage')" href="#" />
+				<area shape="poly" coords="285,38,300,53,285,68,271,53" alt="lac_la_croix" onmouseover="showEntries('lac_la_croix')" onmouseout="hideEntries('lac_la_croix')" href="#" />
+				<area shape="poly" coords="804,148,818,163,805,178,790,163" alt="cache_bay" onmouseover="showEntries('cache_bay')" onmouseout="hideEntries('cache_bay')" href="#" />
+				<area shape="poly" coords="876,636,889,650,875,662,862,650" alt="tofte" onmouseover="showEntries('tofte')" onmouseout="hideEntries('tofte')" href="#" />
+				<area shape="poly" coords="219,671,231,684,218,697,206,685" alt="laurentian" onmouseover="showEntries('laurentian')" onmouseout="hideEntries('laurentian')" href="#" />
+				<area shape="poly" coords="22,473,37,489,22,503,7,490" alt="la_croix" onmouseover="showEntries('la_croix')" onmouseout="hideEntries('la_croix')" href="#" />
+				<area shape="poly" coords="418,386,430,400,417,414,405,401" alt="kawishiwi" onmouseover="showEntries('kawishiwi')" onmouseout="hideEntries('kawishiwi')" href="#" />
+			</map>
+		</div>
+
+	</div>
+
+</body>
+</html>
